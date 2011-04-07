@@ -1,9 +1,0 @@
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Debug\Content\GrassCube.xnb
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Debug\Content\Grass_0.xnb
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Debug\LevelEditor.exe
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Debug\LevelEditor.pdb
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\obj\x86\Debug\LevelEditor.exe
-c:\users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\obj\x86\Debug\LevelEditor.pdb
-C:\Users\fireborn\documents\visual studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Debug\Content\DebugFont.xnb
