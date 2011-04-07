@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>GrassCube.fbx</Source>
+      <Name>GrassCube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Release\Content\GrassCube.xnb</Output>
+      <Time>2011-03-13T14:42:31.0125717-06:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\GrassCube_0.xml</Key>
+        <Value>2011-03-21T22:37:26.9264176-06:00</Value>
+      </Dependency>
+      <Request>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Release\Content\Grass_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>DebugFont.spritefont</Source>
+      <Name>DebugFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Release\Content\DebugFont.xnb</Output>
+      <Time>2011-03-20T23:17:22.2757339-06:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassCube.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\GrassCube_0.xml</Output>
+      <Time>2011-03-13T14:42:31.0125717-06:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\Pictures\Textures\Grass.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Release\Content\Grass_0.xnb</Output>
+      <Time>2011-03-13T13:36:42.3437208-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditorContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditorContent\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\fireborn\Documents\Visual Studio 2010\Projects\LevelEditor\LevelEditor\LevelEditor\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-02-15T20:51:40.1210412-07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
