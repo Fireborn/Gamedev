@@ -8,12 +8,14 @@ namespace LevelEditor
 {
     class OctreeNode
     {
-        public OctreeNode(BoundingBox nodeBoundingBox)
+        public OctreeNode(int boundingBoxIndex, Vector3 boundingBoxPosition)
         {
-            NodeBoundingBox = nodeBoundingBox;
+            BoundingBoxIndex = boundingBoxIndex;
+            BoundingBoxPosition = boundingBoxPosition;
         }
 
-        public BoundingBox NodeBoundingBox;
+        public int BoundingBoxIndex;
+        public Vector3 BoundingBoxPosition;
         public List<Vector3> InternalObjectPositions = new List<Vector3>();
         public List<BoundingBox> InternalObjectBoundingBoxes = new List<BoundingBox>();
         public OctreeNode[] Children = null;
@@ -22,11 +24,13 @@ namespace LevelEditor
     class Octree
     {
         private OctreeNode root;
-        private static readonly int _maxItemsPerNode = 5000;
+        private List<BoundingBox> _boundingBoxes = new List<BoundingBox>();
+        private const int _maxItemsPerNode = 500;
 
-        public Octree(BoundingBox topLevelBoundingBox)
+        public Octree(BoundingBox topLevelBoundingBox, Vector3 topLevelBoundingBoxPosition)
         {
-            root = new OctreeNode(topLevelBoundingBox);
+            _boundingBoxes.Add(topLevelBoundingBox);
+            root = new OctreeNode(_boundingBoxes.Count - 1, topLevelBoundingBoxPosition);
         }
 
         public void AddItems(Vector3[] positions, BoundingBox[] boundingBoxes)
@@ -39,7 +43,11 @@ namespace LevelEditor
 
         private void FindContainingNode(OctreeNode node, Vector3 position, BoundingBox boundingBox)
         {
-            if (node.NodeBoundingBox.Intersects(boundingBox))
+            BoundingBox translatedBoundingBox = _boundingBoxes[node.BoundingBoxIndex];
+            translatedBoundingBox.Max += node.BoundingBoxPosition;
+            translatedBoundingBox.Min += node.BoundingBoxPosition;
+
+            if (translatedBoundingBox.Intersects(boundingBox))
             {
                 if (node.Children == null)
                 {
@@ -76,18 +84,40 @@ namespace LevelEditor
 
             node.Children = new OctreeNode[8];
 
-            Vector3[] nodeCorners = node.NodeBoundingBox.GetCorners();
-            Vector3 nodeCenter = (node.NodeBoundingBox.Max - node.NodeBoundingBox.Min) / 2.0f;
+            BoundingBox nodeBoundingBox = _boundingBoxes[node.BoundingBoxIndex];
+            nodeBoundingBox.Max += node.BoundingBoxPosition;
+            nodeBoundingBox.Min += node.BoundingBoxPosition;
+
+            Vector3[] nodeCorners = nodeBoundingBox.GetCorners();
+            Vector3 nodeCenter = (nodeBoundingBox.Max + nodeBoundingBox.Min) / 2.0f;
 
             Vector3[] points = new Vector3[2];
 
             for (int i = 0; i < node.Children.Length; ++i)
             {
-                // Center + 1 Corner define opposite corners of one of our 8 sub-bounding boxes
-                points[0] = nodeCorners[i];
-                points[1] = nodeCenter;
+                Vector3 subRegionCenter = (nodeCorners[i] + nodeCenter) / 2.0f;
+                //if (subRegionCenter.X < 0 || subRegionCenter.Y < 0 || subRegionCenter.Z < 0)
+                //{
+                //    // TODO: None of this shit is right
+                //    subRegionCenter = nodeCenter + nodeCorners[i] / 2.0f;
+                //}
 
-                node.Children[i] = new OctreeNode(BoundingBox.CreateFromPoints(points));
+                // shrink our bounding box by a factor of 2
+                points[0] = _boundingBoxes[node.BoundingBoxIndex].Max / 2.0f;
+                points[1] = _boundingBoxes[node.BoundingBoxIndex].Min / 2.0f;
+
+                BoundingBox newBoundingBox = BoundingBox.CreateFromPoints(points);
+
+                if (_boundingBoxes.Contains(newBoundingBox))
+                {
+                    int index = _boundingBoxes.FindIndex(x => x == newBoundingBox);
+                    node.Children[i] = new OctreeNode(index, subRegionCenter);
+                }
+                else
+                {
+                    _boundingBoxes.Add(newBoundingBox);
+                    node.Children[i] = new OctreeNode(_boundingBoxes.Count - 1, subRegionCenter);
+                }
             }
 
             for (int i = 0; i < node.InternalObjectPositions.Count; ++i)
@@ -108,7 +138,11 @@ namespace LevelEditor
         {
             intersectedPosition = new Vector3();
 
-            if(ray.Intersects(node.NodeBoundingBox) != null)
+            BoundingBox translatedBoundingBox = _boundingBoxes[node.BoundingBoxIndex];
+            translatedBoundingBox.Max += node.BoundingBoxPosition;
+            translatedBoundingBox.Min += node.BoundingBoxPosition;
+
+            if (ray.Intersects(translatedBoundingBox) != null)
             {
                 if (node.Children == null)
                 {

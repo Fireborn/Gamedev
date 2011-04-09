@@ -69,8 +69,7 @@ namespace LevelEditor
 
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            //graphics.IsFullScreen = true;
-            graphics.ToggleFullScreen();
+            //graphics.ToggleFullScreen();
         }
 
         /// <summary>

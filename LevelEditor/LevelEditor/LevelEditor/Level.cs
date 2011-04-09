@@ -10,7 +10,6 @@ namespace LevelEditor
 {
     class Level
     {
-        //private BoundingBox[, ,] _levelCubeBoundingBoxes;
         private int[, ,] _level;
         private int _levelLength;
         private int _levelWidth;
@@ -37,7 +36,7 @@ namespace LevelEditor
             _levelHeight = levelHeight;
 
             _level = new int[levelLength, levelHeight, levelWidth];
-            _levelOctree = new Octree(new BoundingBox(Vector3.Zero, new Vector3(2*_levelLength, 2*_levelHeight, 2*_levelWidth)));
+            _levelOctree = new Octree(new BoundingBox(new Vector3(-_levelLength, -_levelHeight, -_levelWidth), new Vector3(_levelLength, _levelHeight, _levelWidth)), new Vector3(_levelLength, _levelHeight, _levelWidth));
             //_levelCubeBoundingBoxes = new BoundingBox[levelLength, levelHeight, levelWidth];
 
             for (int x = 0; x < levelLength; ++x)
