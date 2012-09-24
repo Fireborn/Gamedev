@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyRpgXna4", "FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4.csproj", "{44E7A57E-7CF5-4C5C-89F6-812BC3860984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyRpgXna4Content", "FantasyRpgXna4\FantasyRpgXna4Content\FantasyRpgXna4Content.contentproj", "{0ED4557A-8AD2-49A7-94D3-D22EC29BA19D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib", "..\GameLib\GameLib.csproj", "{8542A0FC-179F-4860-91BE-43ED18978C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeGameWorld", "..\LevelEditor\CubeGameWorld\CubeGameWorld.csproj", "{2B709682-3258-417D-8E97-43DF61F28EBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44E7A57E-7CF5-4C5C-89F6-812BC3860984}.Debug|x86.ActiveCfg = Debug|x86
+		{44E7A57E-7CF5-4C5C-89F6-812BC3860984}.Debug|x86.Build.0 = Debug|x86
+		{44E7A57E-7CF5-4C5C-89F6-812BC3860984}.Release|x86.ActiveCfg = Release|x86
+		{44E7A57E-7CF5-4C5C-89F6-812BC3860984}.Release|x86.Build.0 = Release|x86
+		{0ED4557A-8AD2-49A7-94D3-D22EC29BA19D}.Debug|x86.ActiveCfg = Debug|x86
+		{0ED4557A-8AD2-49A7-94D3-D22EC29BA19D}.Release|x86.ActiveCfg = Release|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Debug|x86.ActiveCfg = Debug|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Debug|x86.Build.0 = Debug|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Release|x86.ActiveCfg = Release|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Release|x86.Build.0 = Release|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Debug|x86.ActiveCfg = Debug|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Debug|x86.Build.0 = Debug|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Release|x86.ActiveCfg = Release|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

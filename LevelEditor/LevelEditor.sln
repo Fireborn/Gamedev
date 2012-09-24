@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelEditor", "LevelEditor\LevelEditor\LevelEditor.csproj", "{1E1E61D6-17D9-4FB6-B538-14DC28875437}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "LevelEditorContent", "LevelEditor\LevelEditorContent\LevelEditorContent.contentproj", "{AFA62A41-624E-4154-B372-433A1D4D1359}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelEditorContent", "LevelEditor\LevelEditorContent\LevelEditorContent.contentproj", "{AFA62A41-624E-4154-B372-433A1D4D1359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib", "..\GameLib\GameLib.csproj", "{8542A0FC-179F-4860-91BE-43ED18978C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeGameWorld", "CubeGameWorld\CubeGameWorld.csproj", "{2B709682-3258-417D-8E97-43DF61F28EBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,14 @@ Global
 		{1E1E61D6-17D9-4FB6-B538-14DC28875437}.Release|x86.Build.0 = Release|x86
 		{AFA62A41-624E-4154-B372-433A1D4D1359}.Debug|x86.ActiveCfg = Debug|x86
 		{AFA62A41-624E-4154-B372-433A1D4D1359}.Release|x86.ActiveCfg = Release|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Debug|x86.ActiveCfg = Debug|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Debug|x86.Build.0 = Debug|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Release|x86.ActiveCfg = Release|x86
+		{8542A0FC-179F-4860-91BE-43ED18978C5E}.Release|x86.Build.0 = Release|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Debug|x86.ActiveCfg = Debug|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Debug|x86.Build.0 = Debug|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Release|x86.ActiveCfg = Release|x86
+		{2B709682-3258-417D-8E97-43DF61F28EBB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
