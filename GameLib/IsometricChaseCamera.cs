@@ -18,7 +18,7 @@ namespace GameLib
         {
             _altitude = altitude;
             Position = playerPosition + Vector3.Up * _altitude;
-            ViewMatrix = Matrix.CreateLookAt(Position, playerPosition, Vector3.Up);
+            ViewMatrix = Matrix.CreateLookAt(Position, playerPosition, Vector3.Forward);
         }
 
         public Matrix ViewMatrix
@@ -36,7 +36,7 @@ namespace GameLib
         public void Update(GameTime gameTime, Vector3 playerPosition)
         {
             Position = playerPosition + Vector3.Up * _altitude;
-            ViewMatrix = Matrix.CreateLookAt(Position, playerPosition, Vector3.Up);
+            ViewMatrix = Matrix.CreateLookAt(Position, playerPosition, Vector3.Forward);
         }
     }
 }

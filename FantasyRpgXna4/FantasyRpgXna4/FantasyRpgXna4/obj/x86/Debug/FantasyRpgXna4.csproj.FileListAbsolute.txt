@@ -8,3 +8,13 @@ C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\GameLib.pd
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\CubeGameWorld.pdb
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\obj\x86\Debug\FantasyRpgXna4.exe
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\obj\x86\Debug\FantasyRpgXna4.pdb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\DirtCube.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\GrassCube.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\StoneCube.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\WaterCube.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\dirt_0.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Grass_0.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\StoneWallTiled_0.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\water_0.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\sun.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Sun_0.xnb

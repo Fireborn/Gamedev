@@ -1,6 +1,191 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>DirtCube.fbx</Source>
+      <Name>DirtCube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\DirtCube.xnb</Output>
+      <Time>2011-05-21T14:34:28.7415518-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\DirtCube_0.xml</Key>
+        <Value>2012-09-27T21:39:08.720264-07:00</Value>
+      </Dependency>
+      <Request>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\dirt_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>GrassCube.fbx</Source>
+      <Name>GrassCube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\GrassCube.xnb</Output>
+      <Time>2011-05-21T13:41:48.6258035-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\GrassCube_0.xml</Key>
+        <Value>2012-09-27T21:40:12.7529265-07:00</Value>
+      </Dependency>
+      <Request>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Grass_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>StoneCube.fbx</Source>
+      <Name>StoneCube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\StoneCube.xnb</Output>
+      <Time>2011-05-21T14:33:41.6938609-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\StoneCube_0.xml</Key>
+        <Value>2012-09-27T21:40:13.0429431-07:00</Value>
+      </Dependency>
+      <Request>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\StoneWallTiled_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>WaterCube.fbx</Source>
+      <Name>WaterCube</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\WaterCube.xnb</Output>
+      <Time>2011-05-21T14:34:02.4460478-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\WaterCube_0.xml</Key>
+        <Value>2012-09-27T21:40:13.5149701-07:00</Value>
+      </Dependency>
+      <Request>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\water_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>DirtCube.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\DirtCube_0.xml</Output>
+      <Time>2011-05-21T14:34:28.7415518-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\dirt.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\dirt_0.xnb</Output>
+      <Time>2011-05-21T12:44:16.0493275-07:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassCube.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\GrassCube_0.xml</Output>
+      <Time>2011-05-21T13:41:48.6258035-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Grass.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Grass_0.xnb</Output>
+      <Time>2011-04-06T21:34:00.4710832-07:00</Time>
+    </Item>
+    <Item>
+      <Source>StoneCube.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\StoneCube_0.xml</Output>
+      <Time>2011-05-21T14:33:41.6938609-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\StoneWallTiled.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\StoneWallTiled_0.xnb</Output>
+      <Time>2011-05-21T13:30:06.3456354-07:00</Time>
+    </Item>
+    <Item>
+      <Source>WaterCube.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\WaterCube_0.xml</Output>
+      <Time>2011-05-21T14:34:02.4460478-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\water.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\water_0.xnb</Output>
+      <Time>2011-05-21T12:44:01.0814714-07:00</Time>
+    </Item>
+    <Item>
+      <Source>sun.fbx</Source>
+      <Name>sun</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\sun.xnb</Output>
+      <Time>2011-06-25T13:03:58.3949085-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\sun_0.xml</Key>
+        <Value>2012-09-27T21:42:41.0064061-07:00</Value>
+      </Dependency>
+      <Request>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Sun_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>sun.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\sun_0.xml</Output>
+      <Time>2011-06-25T13:03:58.3949085-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Sun.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Sun_0.xnb</Output>
+      <Time>2011-06-28T08:18:45.7431252-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
@@ -13,6 +198,30 @@
       <OutputDirectory>C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
+      </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2011-02-15T19:51:40.1210412-08:00</Value>

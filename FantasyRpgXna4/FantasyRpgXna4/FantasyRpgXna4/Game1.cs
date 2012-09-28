@@ -63,7 +63,7 @@ namespace FantasyRpgXna4
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _gameWorld = GameWorld.Load("test.level", GraphicsDevice, Content);
-            _player = new Player(new Vector3(10, 10, 10), Content.Load<Model>("PlayerModel"));
+            _player = new Player(new Vector3(0, 2, 0), Content.Load<Model>("DirtCube"));
             _camera = new IsometricChaseCamera(20.0f, _player.Position);
             _projectionMatrix = Matrix.CreatePerspectiveFieldOfView((float)Math.PI / 2.0f, 4.0f / 3.0f, 1, 1000000);
 
@@ -79,7 +79,7 @@ namespace FantasyRpgXna4
 
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            graphics.ToggleFullScreen();
+            //graphics.ToggleFullScreen();
 
             //_screenCenterX = GraphicsDevice.Viewport.Width / 2;
             //_screenCenterY = GraphicsDevice.Viewport.Height / 2;
@@ -132,7 +132,7 @@ namespace FantasyRpgXna4
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            _camera.Update(gameTime, _player.Position);
 
             base.Update(gameTime);
         }
