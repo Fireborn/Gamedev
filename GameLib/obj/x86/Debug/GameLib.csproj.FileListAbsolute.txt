@@ -1,6 +1,6 @@
-C:\Gamedev\GameLib\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Gamedev\GameLib\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Gamedev\GameLib\bin\x86\Debug\GameLib.dll
 C:\Gamedev\GameLib\bin\x86\Debug\GameLib.pdb
 C:\Gamedev\GameLib\obj\x86\Debug\GameLib.dll
 C:\Gamedev\GameLib\obj\x86\Debug\GameLib.pdb
+C:\Gamedev\GameLib\obj\x86\Debug\GameLib.csprojResolveAssemblyReference.cache

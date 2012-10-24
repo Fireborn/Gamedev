@@ -107,6 +107,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InputHandlers\InputHandler.cs" />
+    <Compile Include="InputHandlers\KeyboardInputHandler.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />

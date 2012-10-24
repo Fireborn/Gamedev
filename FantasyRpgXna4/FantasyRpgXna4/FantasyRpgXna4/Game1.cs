@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using CubeGameWorld;
 using GameLib;
+using FantasyRpgXna4.InputHandlers;
 
 namespace FantasyRpgXna4
 {
@@ -34,10 +35,13 @@ namespace FantasyRpgXna4
         Player _player;
         Matrix _projectionMatrix;
 
+        InputHandler _inputHandler;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            _inputHandler = new KeyboardInputHandler();
         }
 
         /// <summary>
@@ -63,7 +67,7 @@ namespace FantasyRpgXna4
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _gameWorld = GameWorld.Load("test.level", GraphicsDevice, Content);
-            _player = new Player(new Vector3(0, 2, 0), Content.Load<Model>("DirtCube"));
+            _player = new Player(new Vector3(100, 2, 10), Content.Load<Model>("DirtCube"));
             _camera = new IsometricChaseCamera(20.0f, _player.Position);
             _projectionMatrix = Matrix.CreatePerspectiveFieldOfView((float)Math.PI / 2.0f, 4.0f / 3.0f, 1, 1000000);
 
@@ -128,9 +132,49 @@ namespace FantasyRpgXna4
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
+            GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
+            if (gamePadState.IsConnected)
+            {
+                // Allows the game to exit
+                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                    this.Exit();
+
+                if (GamePad.GetState(PlayerIndex.One).ThumbSticks.Left.X == 1)
+                    this.Exit();
+            }
+
+            _inputHandler.Update(gameTime);
+            MovementDirection movementDirection = _inputHandler.GetMovementDirection();
+            Vector3 worldSpaceMovementVector = Vector3.Zero;
+            switch (movementDirection)
+            {
+                case MovementDirection.Up:
+                    worldSpaceMovementVector = Vector3.Forward;
+                    break;
+                case MovementDirection.UpRight:
+                    worldSpaceMovementVector = Vector3.Forward + Vector3.Right;
+                    break;
+                case MovementDirection.Right:
+                    worldSpaceMovementVector = Vector3.Right;
+                    break;
+                case MovementDirection.RightDown:
+                    worldSpaceMovementVector = Vector3.Right + Vector3.Backward;
+                    break;
+                case MovementDirection.Down:
+                    worldSpaceMovementVector = Vector3.Backward;
+                    break;
+                case MovementDirection.DownLeft:
+                    worldSpaceMovementVector = Vector3.Backward + Vector3.Left;
+                    break;
+                case MovementDirection.Left:
+                    worldSpaceMovementVector = Vector3.Left;
+                    break;
+                case MovementDirection.LeftUp:
+                    worldSpaceMovementVector = Vector3.Left + Vector3.Forward;
+                    break;
+            }
+
+            _player.Position += worldSpaceMovementVector * 0.01f /*velocity in m/ms*/ * gameTime.ElapsedGameTime.Milliseconds;
 
             _camera.Update(gameTime, _player.Position);
 

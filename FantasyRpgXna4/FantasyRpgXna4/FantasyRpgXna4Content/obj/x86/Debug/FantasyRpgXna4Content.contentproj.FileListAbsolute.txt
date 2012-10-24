@@ -1,1 +1,1 @@
-C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4Content\obj\x86\Debug\FantasyRpgXna4Content.contentprojResolveAssemblyReference.cache

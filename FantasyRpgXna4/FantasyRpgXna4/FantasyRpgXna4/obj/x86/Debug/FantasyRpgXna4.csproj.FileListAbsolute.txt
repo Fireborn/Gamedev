@@ -1,4 +1,3 @@
-C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\FantasyRpgXna4.exe
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\FantasyRpgXna4.pdb
@@ -18,3 +17,4 @@ C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Te
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\water_0.xnb
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\sun.xnb
 C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\bin\x86\Debug\Content\Textures\Sun_0.xnb
+C:\Gamedev\FantasyRpgXna4\FantasyRpgXna4\FantasyRpgXna4\obj\x86\Debug\FantasyRpgXna4.csprojResolveAssemblyReference.cache
