@@ -473,6 +473,31 @@ namespace CubeGameWorld
         /// </summary>
         public String[] _cubeNames { get; private set; }
 
+
+        /// <summary>
+        /// Check to see if the inputted position intersects the game world
+        /// </summary>
+        /// 
+        /// <param name="position">
+        /// The position to check
+        /// </param>
+        /// 
+        /// <returns>
+        /// True if the point intersects the environment, false otherwise
+        /// </returns>
+        public bool CheckIntersection(Vector3 position)
+        {
+            foreach (Octree octree in _activeClusterData.Octrees.Values)
+            {
+                if(octree.Intersects(position))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         /// 
         /// <summary>
         /// Delete a cube based on the grid position of that cube.  Caution: This will cause an entire cluster of the game world to be
@@ -590,6 +615,19 @@ namespace CubeGameWorld
             int worldZDimension)
         {
             return new GameWorld(worldXDimension, worldYDimension, worldZDimension, graphicsDevice, content);
+        }
+
+
+
+        /// <summary>
+        /// Get the size of the cubes that make up the gameworld
+        /// </summary>
+        public static float CubeSize
+        {
+            get
+            {
+                return _cubeSize;
+            }
         }
 
 

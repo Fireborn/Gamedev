@@ -67,11 +67,9 @@ namespace FantasyRpgXna4
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _gameWorld = GameWorld.Load("test.level", GraphicsDevice, Content);
-            _player = new Player(new Vector3(100, 2, 10), Content.Load<Model>("DirtCube"));
+            _player = new Player(new Vector3(215, 40, 145), Content.Load<Model>("orangecube"));
             _camera = new IsometricChaseCamera(20.0f, _player.Position);
             _projectionMatrix = Matrix.CreatePerspectiveFieldOfView((float)Math.PI / 2.0f, 4.0f / 3.0f, 1, 1000000);
-
-            //_console = new GameConsole(Content);
 
             _sun = Content.Load<Model>("sun");
 
@@ -79,21 +77,10 @@ namespace FantasyRpgXna4
             _lightEffect.Projection = _projectionMatrix;
             _lightEffect.World = Matrix.Identity;
 
-            //_crosshair = Content.Load<Texture2D>("crosshair");
-
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             //graphics.ToggleFullScreen();
 
-            //_screenCenterX = GraphicsDevice.Viewport.Width / 2;
-            //_screenCenterY = GraphicsDevice.Viewport.Height / 2;
-            //_crosshairRectangle = new Rectangle(_screenCenterX - _crosshair.Width / 2, _screenCenterY - _crosshair.Height / 2, _crosshair.Width, _crosshair.Height);
-
-            //Mouse.SetPosition(_screenCenterX, _screenCenterY);
-            //_previousMouseState = Mouse.GetState();
-            //_previousKeyboardState = Keyboard.GetState();
-
-            //_viewMatrix = Matrix.CreateLookAt(_camera.Position, _camera.FocalPoint, _camera.UpVector);
             _lightEffect.View = _camera.ViewMatrix;
 
             _lightPosition = new Vector3(1, 0, 0) * _lightDistance;
@@ -108,8 +95,6 @@ namespace FantasyRpgXna4
             float angleToRotate = (float)Math.Acos(Vector3.Dot(currentNormal, desiredNormal));
 
             _sunWorldMatrix = Matrix.CreateScale(75) * Matrix.CreateFromAxisAngle(axisOfRotation, angleToRotate) * Matrix.CreateTranslation(_lightPosition) * horizontalRotation * verticalRotation;
-
-            //_viewMatrix = Matrix.CreateLookAt(_camera.Position, _camera.FocalPoint, _camera.UpVector);
 
             _gameWorld.SetActiveRenderArea(new Vector3(10, 10, 10), 200);
 
@@ -174,7 +159,34 @@ namespace FantasyRpgXna4
                     break;
             }
 
-            _player.Position += worldSpaceMovementVector * 0.01f /*velocity in m/ms*/ * gameTime.ElapsedGameTime.Milliseconds;
+            Vector3 newPosition = _player.Position + worldSpaceMovementVector * 0.02f /*velocity in m/ms*/ * gameTime.ElapsedGameTime.Milliseconds;
+
+            // Validate that the user can move in that direction
+            if (!_gameWorld.CheckIntersection(newPosition))
+            {
+                // Things look good, but perhaps the player is falling? If so drop the position, else, keep this new position
+                Vector3 fallingPosition = newPosition + Vector3.Down * 0.01f /*Velocity in m/ms*/ * gameTime.ElapsedGameTime.Milliseconds;
+
+                if (!_gameWorld.CheckIntersection(fallingPosition))
+                {
+                    newPosition = fallingPosition;
+                }
+            }
+            else
+            {
+                // The player intersected the environment, maybe he can move upwards a bit to overcome?
+                Vector3 climbingPosition = newPosition + Vector3.Up * GameWorld.CubeSize;
+                if (!_gameWorld.CheckIntersection(climbingPosition))
+                {
+                    newPosition = climbingPosition;
+                }
+                else
+                {
+                    newPosition = _player.Position;
+                }
+            }
+
+            _player.Position = newPosition;
 
             _camera.Update(gameTime, _player.Position);
 
@@ -190,6 +202,8 @@ namespace FantasyRpgXna4
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _gameWorld.Draw(gameTime, GraphicsDevice, Matrix.Identity, _camera.ViewMatrix, _projectionMatrix);
+
+            _player.VisualModel.Draw(Matrix.CreateScale(0.01f, 0.01f, 0.01f) * Matrix.CreateTranslation(_player.Position), _camera.ViewMatrix, _projectionMatrix);
 
             base.Draw(gameTime);
         }

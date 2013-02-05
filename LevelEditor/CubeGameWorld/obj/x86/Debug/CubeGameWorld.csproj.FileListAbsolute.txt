@@ -1,8 +1,0 @@
-C:\Gamedev\LevelEditor\CubeGameWorld\bin\x86\Debug\CubeGameWorld.dll
-C:\Gamedev\LevelEditor\CubeGameWorld\bin\x86\Debug\CubeGameWorld.pdb
-C:\Gamedev\LevelEditor\CubeGameWorld\bin\x86\Debug\GameLib.dll
-C:\Gamedev\LevelEditor\CubeGameWorld\bin\x86\Debug\GameLib.pdb
-C:\Gamedev\LevelEditor\CubeGameWorld\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Gamedev\LevelEditor\CubeGameWorld\obj\x86\Debug\CubeGameWorld.dll
-C:\Gamedev\LevelEditor\CubeGameWorld\obj\x86\Debug\CubeGameWorld.pdb
-C:\Gamedev\LevelEditor\CubeGameWorld\obj\x86\Debug\CubeGameWorld.csprojResolveAssemblyReference.cache

@@ -380,6 +380,49 @@ namespace GameLib
 
 
 
+        public bool Intersects(Vector3 point)
+        {
+            return PointIntersection(_root, point);
+        }
+
+
+
+        private bool PointIntersection(OctreeNode node, Vector3 point)
+        {
+            BoundingBox translatedBoundingBox = _masterBoundingBoxList[node.BoundingBoxIndex];
+            translatedBoundingBox.Max += node.BoundingBoxPosition;
+            translatedBoundingBox.Min += node.BoundingBoxPosition;
+
+            if (translatedBoundingBox.Contains(point) == ContainmentType.Contains)
+            {
+                if (node.Children == null)
+                {
+                    for (int i = 0; i < node.InternalObjectPositions.Count; ++i)
+                    {
+                        if (node.InternalObjectBoundingBoxes[i].Contains(point) == ContainmentType.Contains ||
+                            node.InternalObjectBoundingBoxes[i].Contains(point) == ContainmentType.Intersects )
+                        {
+                            return true;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (OctreeNode childNode in node.Children)
+                    {
+                        if (PointIntersection(childNode, point))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+
+
         /// 
         /// <summary>
         /// Recursively traverse the octree looking for the closest object intersected by the rage
